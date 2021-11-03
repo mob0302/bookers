@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCampBackendNew</title>
+  </head>
+
+  <body>
+  <% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+  <% end %>
+<p>
+  <strong>Title:</strong>
+  <h3 class="title">
+        <%= @book.title %>
+  </h3>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <p class="body">
+        <%= @book.body %>
+      </p>
+</p>
+
+<%= link_to "edit", edit_book_path(@book) %>
+<%= link_to "Back","/books" %>
+
+  </body>
+</html>
